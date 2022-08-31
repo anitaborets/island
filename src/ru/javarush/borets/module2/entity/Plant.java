@@ -13,11 +13,6 @@ public class Plant extends Alive {
     private final boolean eaten = true;
 
     @Override
-    public Alive reproduce() {
-        return new Plant();
-    }
-
-    @Override
     public String toString() {
         return view;
     }

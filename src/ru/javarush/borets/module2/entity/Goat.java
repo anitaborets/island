@@ -12,14 +12,8 @@ public class Goat extends Animal implements Herbivores {
         super(60, 3, 10, true, "Goat");
     }
 
-
-    @Override
-    public Alive reproduce() {
-        return new Goat();
-    }
-
     @Override
     public String toString() {
-        return view;
+        return getName();
     }
 }

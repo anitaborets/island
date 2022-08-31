@@ -11,14 +11,9 @@ public class Boa extends Animal implements Predator {
         super(15, 1, 3, true, "Boa");
     }
 
-       @Override
-    public Alive reproduce() {
-        return new Boa();
-    }
-
     @Override
     public String toString() {
-        return view;
+        return getName();
     }
 
 }

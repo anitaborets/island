@@ -10,15 +10,10 @@ public class Fox extends Animal implements Predator {
 
     public Fox() {
         super(8, 2, 2, true, "Fox");
-    }
-
-        @Override
-    public Alive reproduce() {
-        return new Fox();
-    }
+           }
 
     @Override
     public String toString() {
-        return view;
+        return getName();
     }
 }

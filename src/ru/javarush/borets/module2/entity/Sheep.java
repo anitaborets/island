@@ -13,12 +13,7 @@ public class Sheep extends Animal implements Herbivores {
     }
 
     @Override
-    public Alive reproduce() {
-        return new Sheep();
-    }
-
-    @Override
     public String toString() {
-        return view;
+        return getName();
     }
 }

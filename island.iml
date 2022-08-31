@@ -16,5 +16,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="JColor-5.0.0" level="project" />
+    <orderEntry type="library" name="jackson-all-1.8.3-openbd" level="project" />
   </component>
 </module>

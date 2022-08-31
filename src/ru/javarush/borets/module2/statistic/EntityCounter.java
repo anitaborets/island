@@ -12,7 +12,27 @@ public class EntityCounter extends HashMap<Class<?>, Integer> {
         this.baseType = baseType;
     }
 
-    public void count(Object object) {
+    public static String getStatistic(ArrayList<? extends Alive> listOfAnimals) {
+        EntityCounter count = new EntityCounter(Alive.class);
+        for (Object alive : listOfAnimals) {
+            if (alive != null)
+                count.count((Alive) alive);
+        }
+        return count.printStatistic();
+
+    }
+
+    public static HashMap<Class<?>, Integer> getStatisticForCalculation(ArrayList<? extends Alive> listOfAnimals) {
+        EntityCounter count = new EntityCounter(Alive.class);
+        for (Object alive : listOfAnimals) {
+            if (alive != null)
+                count.count((Alive) alive);
+        }
+        return count;
+
+    }
+
+    private void count(Object object) {
         Class<?> type = object.getClass();
         if (!baseType.isAssignableFrom(type))
             throw new RuntimeException(object + "wrong type " + type);
@@ -27,7 +47,7 @@ public class EntityCounter extends HashMap<Class<?>, Integer> {
             countClass(superClass);
     }
 
-    private void printStatistic() {
+    private String printStatistic() {
         StringBuilder result = new StringBuilder("{");
         for (Entry<Class<?>, Integer> pair : entrySet()) {
             result.append(pair.getKey().getSimpleName());
@@ -37,16 +57,8 @@ public class EntityCounter extends HashMap<Class<?>, Integer> {
         }
         result.delete(result.length() - 1, result.length());
         result.append("}");
-        System.out.println(result);
+        return result.toString();
     }
 
-    public static void getStatistic (ArrayList<? extends Alive> listOfAnimals) {
-        EntityCounter count = new EntityCounter(Alive.class);
-        for (Object alive : listOfAnimals) {
-            if(!(alive ==null))
-            count.count((Alive) alive);
-        }
-        count.printStatistic();
-    }
 }
 

@@ -12,14 +12,9 @@ public class Buffalo extends Animal implements Herbivores {
     }
 
     @Override
-    public Alive reproduce() {
-        return new Buffalo();
-    }
-
-
-    @Override
     public String toString() {
-        return view;
+        return getName();
+
     }
 }
 

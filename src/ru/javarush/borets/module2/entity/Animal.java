@@ -2,19 +2,20 @@ package ru.javarush.borets.module2.entity;
 
 import lombok.EqualsAndHashCode;
 import lombok.Setter;
+
 @Setter
 
 @EqualsAndHashCode(callSuper = true)
 public abstract class Animal extends Alive implements Activity {
-    public static final int START_FOOD_COUNT = 1;
+    public static final int START_FOOD_COUNT = 0;
     public boolean isAte = false;
 
-    double weight;
-    int speed;
-    double amountOfFood;
-    boolean eaten;
-    String view;
-    double foodCount = START_FOOD_COUNT;
+    private double weight;
+    private int speed;
+    private double amountOfFood;
+    private boolean eaten;
+    private String view;
+    private double foodCount = START_FOOD_COUNT;
 
     public Animal(double weight, int speed, double amountOfFood, boolean eaten, String view) {
         this.weight = weight;

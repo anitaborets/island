@@ -7,19 +7,13 @@ import lombok.Getter;
 @EqualsAndHashCode(callSuper = false)
 public class Bear extends Animal implements Predator {
 
-
     public Bear() {
         super(500, 2, 80, false, "Bear");
-           }
-
-
-    @Override
-    public Alive reproduce() {
-        return new Bear();
     }
+
 
     @Override
     public String toString() {
-        return view;
+        return getName();
     }
 }

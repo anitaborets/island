@@ -1,7 +1,6 @@
 package ru.javarush.borets.module2.factory;
 
 import ru.javarush.borets.module2.entity.Alive;
-import ru.javarush.borets.module2.entity.Animal;
 import ru.javarush.borets.module2.entity.Bear;
 import ru.javarush.borets.module2.entity.Boa;
 import ru.javarush.borets.module2.entity.Buffalo;
@@ -30,7 +29,7 @@ import static ru.javarush.borets.module2.factory.MaxQuantity.maxQuantity;
 
 public class AnimalCreator {
     public static final List<Class<? extends Alive>> allAlives = Collections.unmodifiableList(Arrays.asList(Bear.class, Boa.class, Buffalo.class,
-            Caterpillar.class, Deer.class, Animal.class, Alive.class));
+            Caterpillar.class, Deer.class,Duck.class,Eagle.class,Fox.class,Goat.class,Horse.class,Pig.class,Mouse.class,Rabbit.class,Wolf.class,Sheep.class));
 
     public static List<? super Alive> listOfAnimals = new ArrayList<>();
 
@@ -121,5 +120,6 @@ public class AnimalCreator {
 
         return listOfAnimalsForSpot;
     }
+
 
 }

@@ -9,14 +9,7 @@ import lombok.Getter;
 @Getter
 public class Water extends Alive {
 
-    //private final String view = "Yuck";
-    private final String view = "\u2652";;
-
-
-    @Override
-    public Alive reproduce() {
-        return new Water();
-    }
+    private final String view = "\u2652";
 
     @Override
     public String toString() {
